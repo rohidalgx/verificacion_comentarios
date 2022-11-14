@@ -22,13 +22,15 @@ int main() {
 	Neutral N;
 	int puntaje = P.seleccionarCategoria(5);
 
-	printf("Puntaje %d", puntaje);
+	printf("Puntaje %d\n", puntaje);
 
 	Comentador pepe(3815239217, "Yerba Buena", "Tucuman", "Argentina");
 	Comentario coment;
 
 	coment = pepe.agregarComentario();
+	coment.printComentario();
 
+	printf("FIN");
 
 
 	return 0;

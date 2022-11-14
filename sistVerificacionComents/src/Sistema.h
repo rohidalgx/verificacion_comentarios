@@ -23,7 +23,7 @@ private:
 
 public:
 	Sistema();
-	Sistema(Comentador usuarios, Empresa empresas);
+	Sistema(vector<Comentador> usuarios,vector<Empresa> empresas);
 	void agregarUsuario(Comentador usuario);
 	void agregarEmpresa(Empresa empresa);
 	void recategorizar();

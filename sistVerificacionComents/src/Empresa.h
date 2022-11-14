@@ -16,20 +16,23 @@ using namespace std;
 #include <vector>
 class Empresa {
 
+
 private:
 	string nombre;
-	int razónSocial;
+	int razonSocial;
 	string rubro;
-	string sitioWeb;
+	vector <string> redesSociales;
 	Administrador administrador;
-	vector<Comentador> comentadores;
 	vector<Comentario> comentarios;
 
 
 public:
 	Empresa();
-	Empresa(string nombre, int razónSocial, string rubro,string sitioWeb,Administrador administrador);
+	Empresa(string nombre, int razonSocial, string rubro,string sitioWeb,Administrador administrador);
 	virtual ~Empresa();
+	void mostrarRedes();
+	void agregarRedes(string red);
+	void quitarRedes(string red);
 
 friend class Administrador;
 };

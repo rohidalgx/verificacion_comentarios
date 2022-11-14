@@ -14,10 +14,14 @@ private:
 	string comentario;
 	Fecha fecha;
 	int puntuacion;
+	bool mostrar;
 public:
 	Comentario();
 	Comentario(string coment, Fecha fecha, int puntuacion);
+	void setMostrar(bool b);
+	void printComentario();
 	virtual ~Comentario();
+	bool getMostrar();
 };
 
 #endif /* COMENTARIO_H_ */

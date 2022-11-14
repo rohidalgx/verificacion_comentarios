@@ -9,10 +9,10 @@
 #define ADMINISTRADOR_H_
 #include "Comentario.h"
 #include "Comentador.h"
-#include "Empresa.h"
 #include <iostream>
 #include <stdio.h>
 using namespace std;
+class Empresa;
 
 class Administrador {
 
@@ -26,9 +26,9 @@ public:
 	virtual ~Administrador();
 
 	void agregarComentador(Comentador c);
-	void validarComentarios();
-	bool ocultarComentario(Comentario c);
-	bool mostrarComentario(Comentario c);
+	bool validarComentarios(Comentario c);
+	void ocultarComentario(Comentario c);
+	void mostrarComentario(Comentario c);
 };
 
 #endif /* ADMINISTRADOR_H_ */

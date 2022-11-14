@@ -16,7 +16,7 @@ Sistema::~Sistema() {
 	// TODO Auto-generated destructor stub
 }
 
-Sistema::Sistema(Comentador usuarios, Empresa empresas){
+Sistema::Sistema(vector<Comentador> usuarios,vector<Empresa> empresas){
 	this->usuarios = usuarios;
 	this->empresas = empresas;
 }

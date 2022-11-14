@@ -21,3 +21,25 @@ Comentario::Comentario(string coment, Fecha fecha, int puntuacion){
 	this->fecha = fecha;
 	this->puntuacion = puntuacion;
 }
+
+void Comentario::setMostrar(bool b){
+	this->mostrar = b;
+}
+
+bool Comentario::getMostrar(){
+	return(this->mostrar);
+}
+
+void Comentario::printComentario(){
+
+	printf("Comentario\n");
+	cout<<this->comentario<<endl;
+
+
+	printf("Fecha\n");
+	cout<<this->fecha<<endl;
+
+
+	printf("Puntaje\n");
+	cout<<this->puntuacion<<endl;
+}

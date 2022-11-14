@@ -6,6 +6,8 @@
  */
 
 #include "Administrador.h"
+#include "Empresa.h"
+
 
 Administrador::Administrador() {
 	// TODO Auto-generated constructor stub
@@ -22,6 +24,16 @@ Administrador::~Administrador() {
 void Administrador::agregarComentador(Comentador c){
 	empresa->comentadores.insert(empresa->comentadores.end(), c);
 }
-void Administrador::validarComentarios();
-bool Administrador::ocultarComentario(Comentario);
-bool Administrador::mostrarComentario(Comentario);
+bool Administrador::validarComentarios(Comentario c){
+	bool siono;
+	printf("Comentario valido?\n");
+	cin>>siono;
+	return(siono);
+}
+void Administrador::ocultarComentario(Comentario c){
+	c.setMostrar(false);
+
+}
+void Administrador::mostrarComentario(Comentario c){
+	c.setMostrar(true);
+}

@@ -24,7 +24,7 @@ Comentador::Comentador(int telefono, string ciudad, string provincia, string pai
 	this->ciudad = ciudad;
 	this->provincia = provincia;
 	this->pais = pais;
-	Neutral neutral;
+	Neutral *neutral;
 	categoria = neutral;
 	cantidadComentarios = 0;
 	valoracion = 0;
@@ -32,21 +32,21 @@ Comentador::Comentador(int telefono, string ciudad, string provincia, string pai
 }
 
 Comentario Comentador::agregarComentario(){
-	char comentario[50];
+	string comentario;
 	int dia, mes, anio, puntaje;
 	printf("Ingrese el comentario\n");
-	gets(comentario);
+	cin>>comentario;
 
 	printf("Ingrese la fecha\n");
 	printf("Dia\n");
-	scanf("%d", &dia);
+	cin>>dia;
 	printf("Mes\n");
-	scanf("%d", &mes);
+	cin>>mes;
 	printf("Anio\n");
-	scanf("%d", &anio);
+	cin>>anio;
 
 	printf("Ingrese el puntaje\n");
-	scanf("%d", &puntaje);
+	cin>>puntaje;
 	Fecha f(dia, mes, anio);
 	Comentario coment(comentario, f, puntaje);
 
