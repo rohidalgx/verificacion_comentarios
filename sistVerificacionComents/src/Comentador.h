@@ -12,6 +12,9 @@
 using namespace std;
 #include "Categoria.h"
 #include "Comentario.h"
+#include "Pesimista.h"
+#include "Optimista.h"
+#include "Neutral.h"
 
 class Comentador {
 private:
@@ -20,12 +23,18 @@ private:
 	string provincia;
 	string pais;
 	Categoria *categoria;
+	float valoracion;
+	int cantidadComentarios;
+	int totalPuntaje;
 
 
 public:
 	Comentador();
 	Comentador(int telefono, string ciudad, string provincia, string pais);
 	virtual ~Comentador();
+	int getPuntaje();
+	int getCantidad();
+	void setValoracion(float total);
 	Comentario agregarComentario();
 
 

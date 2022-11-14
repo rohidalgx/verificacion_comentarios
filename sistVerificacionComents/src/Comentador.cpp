@@ -24,6 +24,11 @@ Comentador::Comentador(int telefono, string ciudad, string provincia, string pai
 	this->ciudad = ciudad;
 	this->provincia = provincia;
 	this->pais = pais;
+	Neutral neutral;
+	categoria = neutral;
+	cantidadComentarios = 0;
+	valoracion = 0;
+	totalPuntaje = 0;
 }
 
 Comentario Comentador::agregarComentario(){
@@ -45,6 +50,23 @@ Comentario Comentador::agregarComentario(){
 	Fecha f(dia, mes, anio);
 	Comentario coment(comentario, f, puntaje);
 
+
+	cantidadComentarios ++;
+	totalPuntaje = totalPuntaje + puntaje;
+
 	return(coment);
 
+}
+
+
+
+int Comentador::getPuntaje(){
+	return totalPuntaje;
+}
+int Comentador::getCantidad(){
+	return cantidadComentarios;
+}
+void Comentador::setValoracion(float total){
+
+	valoracion = total;
 }
