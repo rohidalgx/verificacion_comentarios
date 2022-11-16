@@ -29,13 +29,13 @@ void Empresa::agregarRedes(string red){
 }
 
 void Empresa::quitarRedes(string red){
-	for(int i = 0; i < this->redesSociales.size(); i++){
-		if(this->redesSociales[i]==red){
-			this->redesSociales.erase(i);
-			this->redesSociales.erase(__first, __last);
-		}
-	}
+//	for(int i = 0; i < this->redesSociales.size(); i++){
+//		if(this->redesSociales[i]==red){
+//			this->redesSociales.erase(i);
+//			this->redesSociales.erase(__first, __last);
+//		}
+//	}
 //	this->redesSociales.erase(0, this->redesSociales, red);
-	redesSociales.erase(std::remove(redesSociales.begin(), redesSociales.end(), red), redesSociales.end());
+//	redesSociales.erase(std::remove(redesSociales.begin(), redesSociales.end(), red), redesSociales.end());
 //	this->redesSociales.erase(__first, __last)
 }

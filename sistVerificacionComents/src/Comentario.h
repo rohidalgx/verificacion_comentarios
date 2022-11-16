@@ -18,9 +18,9 @@ private:
 public:
 	Comentario();
 	Comentario(string coment, Fecha fecha, int puntuacion);
+	virtual ~Comentario();
 	void setMostrar(bool b);
 	void printComentario();
-	virtual ~Comentario();
 	bool getMostrar();
 };
 

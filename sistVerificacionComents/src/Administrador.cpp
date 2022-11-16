@@ -22,7 +22,8 @@ Administrador::~Administrador() {
 }
 
 void Administrador::agregarComentador(Comentador c){
-	empresa->comentadores.insert(empresa->comentadores.end(), c);
+//	empresa->comentadores.insert(empresa->comentadores.end(), c);
+//	this->empresa->comentadores.insert(this->empresa->comentadores.end(), c);
 }
 bool Administrador::validarComentarios(Comentario c){
 	bool siono;
