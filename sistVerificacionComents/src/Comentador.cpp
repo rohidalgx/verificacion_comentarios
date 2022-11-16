@@ -31,12 +31,11 @@ Comentador::Comentador(int telefono, string ciudad, string provincia, string pai
 	totalPuntaje = 0;
 }
 
-Comentario Comentador::agregarComentario(){
+bool Comentador::agregarComentario(Empresa e){
 	string comentario;
 	int dia, mes, anio, puntaje;
 	printf("Ingrese el comentario\n");
 	cin>>comentario;
-
 	printf("Ingrese la fecha\n");
 	printf("Dia\n");
 	cin>>dia;
@@ -44,17 +43,15 @@ Comentario Comentador::agregarComentario(){
 	cin>>mes;
 	printf("Anio\n");
 	cin>>anio;
-
 	printf("Ingrese el puntaje\n");
 	cin>>puntaje;
 	Fecha f(dia, mes, anio);
 	Comentario coment(comentario, f, puntaje);
 
-
 	cantidadComentarios ++;
 	totalPuntaje = totalPuntaje + puntaje;
-
-	return(coment);
+	bool b = e.insertarComentario(coment);
+	return(b);
 
 }
 

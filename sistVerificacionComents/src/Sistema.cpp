@@ -27,7 +27,7 @@ void Sistema::agregarEmpresa(Empresa empresa){
 	empresas.insert(empresas.end(), empresa);
 }
 void Sistema::recategorizar(){
-	for (int i  = 0; i < usuarios.size(); ++i) {
+	for (int i  = 0; i < int(usuarios.size()); ++i) {
 
 		float total = usuarios[i].getPuntaje()/usuarios[i].getCantidad();
 		usuarios[i].setValoracion(total);

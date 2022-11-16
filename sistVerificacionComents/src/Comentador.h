@@ -14,6 +14,7 @@ using namespace std;
 #include "Comentario.h"
 #include "Pesimista.h"
 #include "Optimista.h"
+#include "Empresa.h"
 #include "Neutral.h"
 
 class Comentador {
@@ -35,7 +36,7 @@ public:
 	int getPuntaje();
 	int getCantidad();
 	void setValoracion(float total);
-	Comentario agregarComentario();
+	bool agregarComentario(Empresa e);
 
 
 };

@@ -17,18 +17,18 @@ using namespace std;
 int main() {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
 
-	Pesimista P;
-	Optimista O;
-	Neutral N;
-	int puntaje = P.seleccionarCategoria(5);
+//	Pesimista P;
+//	Optimista O;
+//	Neutral N;
+//	int puntaje = P.seleccionarCategoria(5);
+//
+//	printf("Puntaje %d\n", puntaje);
+//
+//	Comentador pepe(3815239217, "Yerba Buena", "Tucuman", "Argentina");
+//	Comentario coment;
 
-	printf("Puntaje %d\n", puntaje);
-
-	Comentador pepe(3815239217, "Yerba Buena", "Tucuman", "Argentina");
-	Comentario coment;
-
-	coment = pepe.agregarComentario();
-	coment.printComentario();
+//	coment = pepe.agregarComentario(e);
+//	coment.printComentario();
 
 	printf("FIN");
 

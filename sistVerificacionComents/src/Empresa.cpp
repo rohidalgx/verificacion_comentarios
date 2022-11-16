@@ -7,6 +7,7 @@
 
 #include "Empresa.h"
 
+
 Empresa::Empresa() {
 	// TODO Auto-generated constructor stub
 
@@ -38,4 +39,13 @@ void Empresa::quitarRedes(string red){
 //	this->redesSociales.erase(0, this->redesSociales, red);
 //	redesSociales.erase(std::remove(redesSociales.begin(), redesSociales.end(), red), redesSociales.end());
 //	this->redesSociales.erase(__first, __last)
+}
+
+bool Empresa::insertarComentario(Comentario c){
+	if(this->administrador.validarComentarios(c)){
+		this->comentarios.insert(this->comentarios.end(), c);
+		return(true);
+	}else{
+		return(false);
+	}
 }

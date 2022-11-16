@@ -24,8 +24,8 @@ public:
 	Administrador();
 	Administrador(Empresa *empresa);
 	virtual ~Administrador();
-
-	void agregarComentador(Comentador c);
+	Comentador s;
+	void agregarComentador(s);
 	bool validarComentarios(Comentario c);
 	void ocultarComentario(Comentario c);
 	void mostrarComentario(Comentario c);

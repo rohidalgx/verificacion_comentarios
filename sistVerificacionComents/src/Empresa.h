@@ -22,17 +22,18 @@ private:
 	int razonSocial;
 	string rubro;
 	vector <string> redesSociales;
-	Administrador administrador;
+	Administrador *administrador;
 	vector<Comentario> comentarios;
 
 
 public:
 	Empresa();
-	Empresa(string nombre, int razonSocial, string rubro,string sitioWeb,Administrador administrador);
+	Empresa(string nombre, int razonSocial, string rubro, string sitioWeb, Administrador *administrador);
 	virtual ~Empresa();
 	void mostrarRedes();
 	void agregarRedes(string red);
 	void quitarRedes(string red);
+	bool insertarComentario(Comentario c);
 
 friend class Administrador;
 };
