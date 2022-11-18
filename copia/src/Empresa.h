@@ -10,7 +10,7 @@
 #include "Comentario.h"
 #include "Fecha.h"
 #include "Administrador.h"
-#include "Comentador.h"
+
 #include <vector>
 
 class Comentador;
