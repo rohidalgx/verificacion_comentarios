@@ -10,7 +10,11 @@
 #include "Comentario.h"
 #include "Fecha.h"
 #include "Administrador.h"
+#include "Comentador.h"
 #include <vector>
+
+class Comentador;
+
 
 class Empresa {
 private:
@@ -18,19 +22,19 @@ private:
 	int razonSocial;
 	string rubro;
 	vector<string> redesSociales;
-	Administrador admnistrador;
+	Administrador *administrador;
 	vector<Comentario> comentarios;
+	vector<Comentador *> comentadores;
 
 public:
 	Empresa();
-	Empresa(string nombre, int razonSocial, string rubro, vector<string> redesSociales, Administrador administrador);
+	Empresa(string nombre, int razonSocial, string rubro, vector<string> redesSociales);
 	virtual ~Empresa();
-
-//	void agregarRed(string red);
-//	void quitarRed(string red);
-	void mostrarRedes();
-	void agregarComentario(Comentario comen);
+	void agregarAdministrador(Administrador *administrador);
+	bool agregarComentario(Comentario comen);
 	void calcularPeso(Fecha f1, Fecha f2);
+	void mostrarRedes();
+	void agregarComnetador(Comentador *comentador);
 };
 
 #endif /* EMPRESA_H_ */

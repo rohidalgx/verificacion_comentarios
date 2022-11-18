@@ -10,11 +10,14 @@
 #include <iostream>
 using namespace std;
 #include "Categoria.h"
-//#include "Comentario.h"
+
 #include "Empresa.h"
 #include "Neutral.h"
+#include "Pesimista.h"
+#include "Optimista.h"
 
 class Comentario;
+class Empresa;
 
 class Comentador {
 private:
@@ -36,6 +39,7 @@ public:
 	int getCantNeg();
 	int getCantPos();
 	int getCantTotal();
+	void recategorizar();
 
 
 };

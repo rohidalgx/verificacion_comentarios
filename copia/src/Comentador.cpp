@@ -36,8 +36,13 @@ void Comentador::agregarComentario(Empresa em, Comentario comen){
 		this->cantNeg++;
 	}else if(comen.getPuntuacion()> 6){
 		this->cantPos++;
+		cout<<"COnsidere dejar su tambien su comentario en  nuestras otras redes"<<endl;
 	}
-	return(em.agregarComentario(comen));
+	if(em.agregarComentario(comen)){
+		cout<<"Comentario aprobado"<<endl;
+	}else{
+		cout<<"COmentario Rechazado"<<endl;
+	};
 }
 float Comentador::calculoPeso(int entero){
 	return(this->cat->seleccionarCategoria(entero));
@@ -50,5 +55,23 @@ int Comentador::getCantPos(){
 }
 int Comentador::getCantTotal(){
 	return(this->cantComentarios);
+}
+
+void Comentador::recategorizar(){
+
+
+	if(cantNeg > cantComentarios*0.6){
+		Pesimista p;
+		cat = &p;
+	}else{
+		if(cantPos > cantComentarios*0.6){
+			Optimista o;
+			cat = &o;
+		}else{
+			Neutral n;
+			cat = &n;
+		}
+	}
+
 }
 

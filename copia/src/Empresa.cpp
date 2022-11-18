@@ -6,34 +6,47 @@
  */
 
 #include "Empresa.h"
+#include "Comentador.h"
+#include "Administrador.h"
 
 Empresa::Empresa() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Empresa::Empresa(string nombre, int razonSocial, string rubro, vector<string> redesSociales, Administrador administrador){
+Empresa::Empresa(string nombre, int razonSocial, string rubro, vector<string> redesSociales){
 	this->nombre = nombre;
 	this->razonSocial = razonSocial;
 	this->rubro = rubro;
 	this->redesSociales = redesSociales;
-	this->admnistrador = administrador;
+
+
+}
+void Empresa::agregarAdministrador(Administrador *administrador){
+	this->administrador = administrador;
 }
 
-Empresa::Empresa(string nombre, int razonSocial, string rubro, Administrador administrador){
-	this->nombre = nombre;
-	this->razonSocial = razonSocial;
-	this->rubro = rubro;
-	this->admnistrador = administrador;
-}
+
 
 Empresa::~Empresa() {
 	// TODO Auto-generated destructor stub
 }
 
-void Empresa::agregarComentario(Comentario comen){
-	this->comentarios.insert(comentarios.end(), comen);
+void Empresa::agregarComnetador(Comentador *comentador){
+	comentadores.insert(comentadores.end(), comentador);
 }
+
+bool Empresa::agregarComentario(Comentario comen){
+	if (this->administrador->validarComentarios(comen)) {
+		this->comentarios.insert(comentarios.end(), comen);
+		return true;
+	}else {
+		return false;
+	}
+
+}
+
+
 
 //void Empresa::agregarRed(string red){
 //	this->redesSociales.insert(redesSociales.end(), red);
