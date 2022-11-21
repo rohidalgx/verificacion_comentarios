@@ -33,9 +33,12 @@ public:
 	bool enComentadores(int telefono);
 	void agregarAdministrador(Administrador *administrador);
 	bool agregarComentario(Comentario comen);
+	string getNombre(){
+		return(this->nombre);
+	}
 	void calcularPeso(Fecha f1, Fecha f2);
 	void mostrarRedes();
-	void agregarComnetador(Comentador *comentador);
+	void agregarComentador(Comentador *comentador);
 };
 
 #endif /* EMPRESA_H_ */

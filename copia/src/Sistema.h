@@ -24,6 +24,7 @@ public:
 	virtual ~Sistema();
 	void agregarUsuario(Comentador comentador);
 	void agregarEmpresa(Empresa empresa);
+	void imprimirInfo();
 	void recategorizar();
 
 };

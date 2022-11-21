@@ -41,7 +41,7 @@ Empresa::~Empresa() {
 	// TODO Auto-generated destructor stub
 }
 
-void Empresa::agregarComnetador(Comentador *comentador){
+void Empresa::agregarComentador(Comentador *comentador){
 	comentadores.insert(comentadores.end(), comentador);
 
 }

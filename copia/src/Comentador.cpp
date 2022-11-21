@@ -46,7 +46,7 @@ void Comentador::agregarComentario(Empresa em, Comentario comen){
 			cout<<"Comentario Rechazado"<<endl;
 		};
 	}else{
-		cout<<"El comentador no es comentador de esta empres"<<endl;
+		cout<<"El comentador no es comentador de esta empresa"<<endl;
 	}
 
 }

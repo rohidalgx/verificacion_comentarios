@@ -25,19 +25,23 @@ Administrador::~Administrador() {
 }
 
 void Administrador::agregarComentador(Comentador *comentador){
-	empresa->agregarComnetador(comentador);
+	empresa->agregarComentador(comentador);
 
 }
 
 bool Administrador::validarComentarios(Comentario comentario){
-	comentario.mostrarComentario();
 	int a;
 	do {
-
-		cout<<"Validar este comentario? 0_si 1_no"<<endl;
+		comentario.setMostrar(true);
+		comentario.mostrarComentario();
+		cout<<"Validar este comentario? 0: no 1: si"<<endl;
 		cin>>a;
 	} while (a<0 and a>1);
-	return a;
+	if(a==1){
+		return(true);
+	}else{
+		return false;
+	}
 }
 
 void Administrador::ocultarComentario(Comentario *comentario){
