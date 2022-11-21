@@ -7,7 +7,7 @@
 
 #include "Administrador.h"
 #include "Empresa.h"
-#include "Comentador.h"
+
 #include <iostream>
 using namespace std;
 

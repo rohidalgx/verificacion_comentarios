@@ -13,7 +13,7 @@
 
 #include <vector>
 
-class Comentador;
+
 
 
 class Empresa {

@@ -7,12 +7,12 @@
 
 #ifndef ADMINISTRADOR_H_
 #define ADMINISTRADOR_H_
-#include "Empresa.h"
-#include "Comentador.h"
+
+
 #include "Comentario.h"
 
 
-class Comentador;
+
 
 
 class Empresa;
