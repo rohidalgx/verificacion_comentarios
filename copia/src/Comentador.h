@@ -36,6 +36,7 @@ public:
 	virtual ~Comentador();
 	void agregarComentario(Empresa em, Comentario comen);
 	float calculoPeso(int entero);
+	int getTelefono();
 	int getCantNeg();
 	int getCantPos();
 	int getCantTotal();

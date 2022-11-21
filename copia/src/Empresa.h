@@ -30,6 +30,7 @@ public:
 	Empresa();
 	Empresa(string nombre, int razonSocial, string rubro, vector<string> redesSociales);
 	virtual ~Empresa();
+	bool enComentadores(int telefono);
 	void agregarAdministrador(Administrador *administrador);
 	bool agregarComentario(Comentario comen);
 	void calcularPeso(Fecha f1, Fecha f2);

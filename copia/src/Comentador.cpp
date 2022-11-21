@@ -31,18 +31,24 @@ Comentador::Comentador(int telefono, string ciudad, string provincia, string pai
 }
 
 void Comentador::agregarComentario(Empresa em, Comentario comen){
-	this->cantComentarios++;
-	if (comen.getPuntuacion() < 4){
-		this->cantNeg++;
-	}else if(comen.getPuntuacion()> 6){
-		this->cantPos++;
-		cout<<"COnsidere dejar su tambien su comentario en  nuestras otras redes"<<endl;
-	}
-	if(em.agregarComentario(comen)){
-		cout<<"Comentario aprobado"<<endl;
+	if (em.enComentadores(this->telefono)) {
+
+		this->cantComentarios++;
+		if (comen.getPuntuacion() < 4){
+			this->cantNeg++;
+		}else if(comen.getPuntuacion()> 6){
+			this->cantPos++;
+			cout<<"COnsidere dejar su tambien su comentario en  nuestras otras redes"<<endl;
+		}
+		if(em.agregarComentario(comen)){
+			cout<<"Comentario aprobado"<<endl;
+		}else{
+			cout<<"Comentario Rechazado"<<endl;
+		};
 	}else{
-		cout<<"COmentario Rechazado"<<endl;
-	};
+		cout<<"El comentador no es comentador de esta empres"<<endl;
+	}
+
 }
 float Comentador::calculoPeso(int entero){
 	return(this->cat->seleccionarCategoria(entero));
@@ -75,3 +81,6 @@ void Comentador::recategorizar(){
 
 }
 
+int Comentador::getTelefono(){
+	return telefono;
+}

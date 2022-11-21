@@ -26,7 +26,16 @@ void Empresa::agregarAdministrador(Administrador *administrador){
 	this->administrador = administrador;
 }
 
+bool Empresa::enComentadores(int telefono){
 
+	for (unsigned int i  = 0; i < comentadores.size(); ++i) {
+		if( telefono == comentadores[i]->getTelefono()){
+			return true;
+		}
+	}
+
+	return false;
+}
 
 Empresa::~Empresa() {
 	// TODO Auto-generated destructor stub
@@ -34,6 +43,7 @@ Empresa::~Empresa() {
 
 void Empresa::agregarComnetador(Comentador *comentador){
 	comentadores.insert(comentadores.end(), comentador);
+
 }
 
 bool Empresa::agregarComentario(Comentario comen){
