@@ -29,13 +29,17 @@ void Sistema::recategorizar(){
 }
 void Sistema::imprimirInfo(){
 	cout<<"Informacion del sistema"<<endl;
-	cout<<"Empresas: "<<endl;
-	for(unsigned int i=0; i<this->empresas.size(); i++){
-		cout<<this->empresas[i].getNombre()<<endl;
-	}
 
 	cout<<"Comentadores: "<<endl;
 	for(unsigned int i=0; i<this->comentadores.size(); i++){
 		cout<<"Telefono"<<this->comentadores[i].getTelefono()<<endl;
 	}
+
+
+	cout<<"Empresas: "<<endl;
+	for(unsigned int i=0; i<this->empresas.size(); i++){
+		cout<<this->empresas[i].getNombre()<<endl;
+	}
+
+
 }
