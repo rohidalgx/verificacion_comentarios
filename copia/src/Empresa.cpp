@@ -28,7 +28,7 @@ void Empresa::agregarAdministrador(Administrador *administrador){
 
 bool Empresa::enComentadores(int telefono){
 
-	for (unsigned int i  = 0; i < comentadores.size(); ++i) {
+	for (unsigned int i = 0; i < comentadores.size(); ++i) {
 		if( telefono == comentadores[i]->getTelefono()){
 			return true;
 		}

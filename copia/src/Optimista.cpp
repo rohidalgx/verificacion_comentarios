@@ -17,10 +17,10 @@ Optimista::~Optimista() {
 }
 
 float Optimista::seleccionarCategoria(float puntaje){
-	if(puntaje > 5){
+	if(puntaje > 6){
 		return(puntaje / 2);
 	}else{
-		if(puntaje < 5){
+		if(puntaje < 4){
 			return(puntaje * 2);
 		}else{
 			return(puntaje);

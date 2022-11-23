@@ -38,18 +38,19 @@ void Comentador::agregarComentario(Empresa em, Comentario comen){
 			this->cantNeg++;
 		}else if(comen.getPuntuacion()> 6){
 			this->cantPos++;
-			cout<<"COnsidere dejar su tambien su comentario en  nuestras otras redes"<<endl;
+			cout<<"No olvide comentar en nuestras redes!"<<endl;
+			em.mostrarRedes();
 		}
 		if(em.agregarComentario(comen)){
-			cout<<"Comentario aprobado"<<endl;
+			cout<<"Comentario Aprobado"<<endl;
 		}else{
 			cout<<"Comentario Rechazado"<<endl;
-		};
+		}
 	}else{
 		cout<<"El comentador no es comentador de esta empresa"<<endl;
 	}
-
 }
+
 float Comentador::calculoPeso(int entero){
 	return(this->cat->seleccionarCategoria(entero));
 }
@@ -64,8 +65,6 @@ int Comentador::getCantTotal(){
 }
 
 void Comentador::recategorizar(){
-
-
 	if(cantNeg > cantComentarios*0.6){
 		Pesimista p;
 		cat = &p;
@@ -78,7 +77,6 @@ void Comentador::recategorizar(){
 			cat = &n;
 		}
 	}
-
 }
 
 int Comentador::getTelefono(){

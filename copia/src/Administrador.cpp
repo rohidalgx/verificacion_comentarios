@@ -38,7 +38,7 @@ bool Administrador::validarComentarios(Comentario comentario){
 		cin>>a;
 	} while (a<0 and a>1);
 	if(a==1){
-		return(true);
+		return true;
 	}else{
 		return false;
 	}
@@ -46,8 +46,10 @@ bool Administrador::validarComentarios(Comentario comentario){
 
 void Administrador::ocultarComentario(Comentario *comentario){
 	comentario->setMostrar(false);
+	comentario->mostrarComentario();
 }
 
 void Administrador::mostrarComentario(Comentario *comentario){
 	comentario->setMostrar(true);
+	comentario->mostrarComentario();
 }
