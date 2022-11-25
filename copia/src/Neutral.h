@@ -14,7 +14,7 @@ class Neutral: public Categoria {
 public:
 	Neutral();
 	virtual ~Neutral();
-	float seleccionarCategoria(float puntaje);
+	float pesoPorCategoria(float puntaje);
 };
 
 #endif /* NEUTRAL_H_ */

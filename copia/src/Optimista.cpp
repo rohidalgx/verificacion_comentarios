@@ -16,7 +16,7 @@ Optimista::~Optimista() {
 	// TODO Auto-generated destructor stub
 }
 
-float Optimista::seleccionarCategoria(float puntaje){
+float Optimista::pesoPorCategoria(float puntaje){
 	if(puntaje > 6){
 		return(puntaje / 2);
 	}else{

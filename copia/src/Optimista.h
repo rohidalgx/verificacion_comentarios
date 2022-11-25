@@ -14,7 +14,7 @@ class Optimista: public Categoria {
 public:
 	Optimista();
 	virtual ~Optimista();
-	float seleccionarCategoria(float puntaje);
+	float pesoPorCategoria(float puntaje);
 };
 
 #endif /* OPTIMISTA_H_ */

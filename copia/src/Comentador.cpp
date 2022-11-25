@@ -54,7 +54,7 @@ void Comentador::agregarComentario(Empresa em, Comentario comen){
 }
 
 float Comentador::calculoPeso(int entero){
-	return(this->cat->seleccionarCategoria(entero));
+	return(this->cat->pesoPorCategoria(entero));
 }
 int Comentador::getCantNeg(){
 	return(this->cantComentarios);

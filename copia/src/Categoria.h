@@ -12,7 +12,7 @@ class Categoria {
 public:
 	Categoria();
 	virtual ~Categoria();
-	virtual float seleccionarCategoria(float puntaje)=0;
+	virtual float pesoPorCategoria(float puntaje)=0;
 
 };
 

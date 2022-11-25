@@ -16,6 +16,6 @@ Neutral::~Neutral() {
 	// TODO Auto-generated destructor stub
 }
 
-float Neutral::seleccionarCategoria(float puntaje){
+float Neutral::pesoPorCategoria(float puntaje){
 	return(puntaje);
 }

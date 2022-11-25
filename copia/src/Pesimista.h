@@ -14,7 +14,7 @@ class Pesimista: public Categoria {
 public:
 	Pesimista();
 	virtual ~Pesimista();
-	float seleccionarCategoria(float puntaje);
+	float pesoPorCategoria(float puntaje);
 };
 
 #endif /* PESIMISTA_H_ */

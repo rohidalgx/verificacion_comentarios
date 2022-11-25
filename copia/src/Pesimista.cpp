@@ -16,7 +16,7 @@ Pesimista::~Pesimista() {
 	// TODO Auto-generated destructor stub
 }
 
-float Pesimista::seleccionarCategoria(float puntaje){
+float Pesimista::pesoPorCategoria(float puntaje){
 
 	if(puntaje < 4){
 		return(puntaje / 2);
