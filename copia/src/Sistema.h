@@ -26,7 +26,6 @@ public:
 	void agregarEmpresa(Empresa empresa);
 	void imprimirInfo();
 	void recategorizar();
-
 };
 
 #endif /* SISTEMA_H_ */

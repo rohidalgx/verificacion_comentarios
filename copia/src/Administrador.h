@@ -12,9 +12,6 @@
 #include "Comentario.h"
 
 
-
-
-
 class Empresa;
 
 class Administrador {

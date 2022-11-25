@@ -6,7 +6,7 @@
  */
 
 #include "Comentador.h"
-#include "Comentario.h"
+//#include "Comentario.h"
 
 static Neutral n;
 static Pesimista p;
@@ -68,14 +68,11 @@ int Comentador::getCantTotal(){
 
 void Comentador::recategorizar(){
 	if(cantNeg > cantComentarios*0.6){
-
 		cat = &p;
 	}else{
 		if(cantPos > cantComentarios*0.6){
-
 			cat = &o;
 		}else{
-
 			cat = &n;
 		}
 	}

@@ -27,13 +27,11 @@ void Empresa::agregarAdministrador(Administrador *administrador){
 }
 
 bool Empresa::enComentadores(int telefono){
-
 	for (unsigned int i = 0; i < comentadores.size(); ++i) {
 		if( telefono == comentadores[i]->getTelefono()){
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -53,17 +51,7 @@ bool Empresa::agregarComentario(Comentario comen){
 	}else {
 		return false;
 	}
-
 }
-
-
-
-//void Empresa::agregarRed(string red){
-//	this->redesSociales.insert(redesSociales.end(), red);
-//}
-//void Empresa::quitarRed(string red){
-//	this->redesSociales.erase(remove(redesSociales.begin(), redesSociales.end(), red), redesSociales.end());
-//}
 
 void Empresa::mostrarRedes(){
 	cout<<"Comenta tambien en nuestras redes"<<endl;
