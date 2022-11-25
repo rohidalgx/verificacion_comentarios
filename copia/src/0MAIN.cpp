@@ -76,7 +76,7 @@ int main() {
 
 	//creo unos comentarios
 	cout<<endl<<"Creando 3 comentarios"<<endl;
-	Comentario c1("Excalente servicio!", f1, 7, &com1);
+	Comentario c1("Excelente servicio!", f1, 7, &com1);
 	Comentario c2("Demoran mucho en atender", f2, 5, &com2);
 	Comentario c3("No tienen estacionamiento", f3, 4, &com3);
 
