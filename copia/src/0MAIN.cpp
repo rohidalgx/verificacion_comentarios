@@ -91,7 +91,7 @@ int main() {
 	sist.imprimirInfo();
 
 	//calculo el peso de los comentarios del comentador
-//	cout<<"Peso del comentario1 realizado por comentador1"<<com1.calculoPeso(c1.getPuntuacion())<<endl<<endl;
+	cout<<"Peso del comentario1 realizado por comentador1<: "<<com1.calculoPeso(c1.getPuntuacion())<<endl<<endl;
 
 	//probando funciones de ocultar y mostrar
 	cout<<endl<<"Ocultando comentario1"<<endl;

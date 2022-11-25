@@ -8,6 +8,9 @@
 #include "Comentador.h"
 #include "Comentario.h"
 
+static Neutral n;
+static Pesimista p;
+static Optimista o;
 
 Comentador::Comentador() {
 	// TODO Auto-generated constructor stub
@@ -26,7 +29,6 @@ Comentador::Comentador(int telefono, string ciudad, string provincia, string pai
 	this->cantComentarios = 0;
 	this->cantNeg = 0;
 	this->cantPos = 0;
-	Neutral n;
 	this->cat = &n;
 }
 
@@ -66,14 +68,14 @@ int Comentador::getCantTotal(){
 
 void Comentador::recategorizar(){
 	if(cantNeg > cantComentarios*0.6){
-		Pesimista p;
+
 		cat = &p;
 	}else{
 		if(cantPos > cantComentarios*0.6){
-			Optimista o;
+
 			cat = &o;
 		}else{
-			Neutral n;
+
 			cat = &n;
 		}
 	}
